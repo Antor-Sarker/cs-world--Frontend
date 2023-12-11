@@ -1,0 +1,219 @@
+.navContainer{
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    background-color: whitesmoke;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+    font-weight: 400;
+    font-size: large;
+    font-family: 'Roboto', sans-serif;
+}
+
+.navMenu{
+    display: grid;
+    grid-template-columns: 2fr 6fr 4fr;
+    padding: 2% 0%;
+}
+.navCategory>div{
+    cursor: pointer;
+}
+
+.barsIcon{
+    height: 1.5rem;
+    width: 1.5rem;
+    display: none;
+    cursor: pointer;
+}
+
+.icon{
+    font-weight: 500;
+    font-size: larger;
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+.catSelect{
+    border: none;
+    font-size: larger;
+    cursor: pointer;
+
+}
+.catSelect:hover{
+    background-color: rgb(114, 119, 119);
+    border-radius: 4%;
+    color: aliceblue;
+}
+
+.navMethod{
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr;
+    margin-right: 5%;
+}
+
+.search{
+  border: 2px solid #a7a5a5;
+  border-radius: 4%;
+  padding: 1% 5%;
+  margin-right: 10%;
+  font-size: medium;
+  width: 85%;
+}
+
+.search:focus{
+    outline: 0;
+    border: 2px solid #140606;
+}
+
+.darkModeContainer{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    border-Radius: 10%;
+    padding: 8%;
+    margin-Right: 30%;
+    cursor: pointer;
+    outline: 1px solid rgb(202, 214, 236);
+}
+
+.darkModeContainer:hover{
+    background-color: #ebf0fc;
+    color: rgb(116, 116, 230);
+
+}
+.toolTip{
+    width: 100%;
+    position: absolute;
+    top: 100%;
+
+    margin-top: 20%;
+    font-size: small;
+    
+    color: black;
+    display: none;
+    background-color: rgb(217, 217, 236);;
+    border-radius: 5%;
+    padding-right: 3rem;
+    padding-left: 1rem;
+    padding-top: 20%;
+    padding-bottom: 20%;
+    /* padding: 80%; */
+    text-align: center;
+}
+
+.darkModeContainer:hover> .toolTip{
+    display: block;
+}
+
+.login{
+    outline: 1px solid blue;
+    width: 70%;
+    margin-right: 50%;
+    border-radius: 3%;
+    padding:0.5rem 1rem;
+    cursor: pointer;
+}
+
+.login:hover{
+    background-color: blue;
+    color: #ebf0fc;
+}
+
+
+/* Responsive */
+ /* Small devices (landscape phones, 576px and up) */
+@media screen and (min-width: 400px) and (max-width: 768px)  {
+    .barsIcon{
+        display: block;
+    }
+
+
+.icon{
+    font-weight: 400;
+    font-size: smaller;
+     
+}
+
+    .navMenu{
+        display: grid;
+        grid-template-columns: 2fr 6fr;
+        padding: 2% 0%;
+
+    }
+    .navCategory{
+        position: absolute;
+        top: 100%;
+        display: none;
+        flex-direction: column;
+        background-color: whitesmoke;
+        width: 50%;
+        
+    }
+    .navCategory>div:hover{
+        background-color: aliceblue;
+    }
+
+    .navCategory>div{
+        padding: 10%;
+    }
+
+    .navMenu{
+    
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        padding: 2% 0%;
+    }
+}
+
+
+/* Medium devices (tablets, 768px and up) */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+
+    .barsIcon{
+        display: block;
+    }
+    .navMenu{
+    
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        padding: 2% 0%;
+    }
+    .navCategory{
+        position: absolute;
+        top: 100%;
+        display: none;
+        flex-direction: column;
+        background-color: whitesmoke;
+        width: 50%;   
+    }
+
+    
+
+    .navCategory>div{
+        padding: 10%;
+    }
+
+    .navCategory>div:hover{
+        background-color: #a7a5a5;
+    }
+    
+}
+
+/* Large devices (desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+    
+    .navCategory{
+        display: flex;
+        /* justify-conten space-around; */
+    }
+    .navCategory>div{
+        margin-left: 7%;
+        padding: 1%;
+    }
+    .cat:hover{
+        background-color: rgb(114, 119, 119);
+        border-radius: 3%;
+        color: aliceblue;
+    }
+}
