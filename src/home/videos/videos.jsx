@@ -34,7 +34,7 @@ function Videos(){
 
     const handelPlay = (id,count)=>{
         
-        fetch('https://cs-world-backend.onrender.com/incrementView',{
+        fetch('https://cs-world-backend.vercel.app/incrementView',{
             method: 'PATCH',
             body: JSON.stringify({
                 id,
